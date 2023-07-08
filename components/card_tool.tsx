@@ -15,8 +15,9 @@ interface CardProps {
 
 const Card: React.FC<CardProps> = ({ id, name, image, link, category, description }) => {
     return (
-      <div className="p-4 w-80 h-auto bg-yellow-500 border rounded-lg shadow-xl">
-        <div className="relative h-64 w-full mb-4 rounded">
+      <>
+      <div className="p-4 w-96 h-auto bg-yellow-500 border-yellow-400 border rounded-lg shadow-2xl gap-0">
+        <div className="relative h-48 w-full mb-4 rounded">
           <Image src={image} alt={name} layout="fill" objectFit="cover" className="rounded" />
         </div>
         <h2 className="text-lg font-bold mb-2">{name}</h2>
@@ -26,6 +27,7 @@ const Card: React.FC<CardProps> = ({ id, name, image, link, category, descriptio
           Visit Site
         </Button>
       </div>
+      </>
     )
   }
 

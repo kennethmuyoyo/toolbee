@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useState } from 'react'
 import Hexagon from './hexagon'
 import { categories } from '@/constants/categories'
@@ -29,22 +30,22 @@ const HexagonTree: React.FC<HexagonTreeProps> = ({ selectedCategories, handleCat
     rows.push(row); // push the remaining elements, if any
   }
 
-  return (
+return (
     <div className="flex flex-col items-center">
       {rows.map((row, rowIndex) => (
-        <div key={rowIndex} className={`flex justify-center ${rowIndex % 2 === 0 ? 'mb-5 md:mb-8' : '-mt-10 -mb-5 md:-mt-16 md:-mb-8'} ${rowIndex % 2 !== 0 ? 'ml' : ''}`}>
+        <div key={rowIndex} className={`flex justify-center ${rowIndex %2 ===0 ? 'mb-5 md:mb-8' : '-mt-10 -mb-5 md:-mt-16 md:-mb-8'} ${rowIndex %2 !==0 ? 'ml' : ''}`}>
           {row.map((category) => (
-  <Hexagon 
-  key={category} 
-  category={category} 
-  selected={selectedCategories.includes(category)} 
-  onCategorySelect={handleCategorySelect} 
-/>
-        ))}
+            <Hexagon 
+              key={category} 
+              category={category} 
+              selected={selectedCategories.includes(category)} 
+              onCategorySelect={handleCategorySelect} 
+            />
+          ))}
         </div>
       ))}
     </div>
-  );
+);
 };
 
 export default HexagonTree;

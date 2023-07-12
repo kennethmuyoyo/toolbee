@@ -1,5 +1,5 @@
 export const categories = [
-    'Randomizer',
+    'Finance',
     'Audio Assistant',
     'Programming',
     'Productivity',
@@ -11,7 +11,6 @@ export const categories = [
     'Customer Support',
     'E-commerce',    
     'Video Editing',
-
     'Image Generation',
     'Image Editing',
     'Search Engine',

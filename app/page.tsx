@@ -1,11 +1,10 @@
 'use client'
 
 import { useState } from 'react'
-import Card from '@/components/card_tool'
 import HeroSection from '@/section/herosection/herosection'
 import ToolSection from '@/section/toolsection/toolsection'
 import Navbar from '@/components/Navbar'
-import { cardsData } from '@/constants/card_data'
+import FeatureSection from '@/section/featuresection/featuresection'
 
 const Page: React.FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -25,7 +24,10 @@ const Page: React.FC = () => {
         link="https://example.com" // replace with the link you want
       />
       <section id="toolsection">
-      <ToolSection selectedCategories={selectedCategories} cards={cardsData}/>
+      <ToolSection selectedCategories={selectedCategories}/>
+      </section>
+      <section id="featuresection">
+      <FeatureSection />
       </section>
     </>
   )

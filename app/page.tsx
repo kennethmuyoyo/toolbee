@@ -5,6 +5,9 @@ import HeroSection from '@/section/herosection/herosection'
 import ToolSection from '@/section/toolsection/toolsection'
 import Navbar from '@/components/Navbar'
 import FeatureSection from '@/section/featuresection/featuresection'
+import Newssection from '@/section/newssection/newsection'
+import Footer from '@/components/footer'
+
 
 const Page: React.FC = () => {
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
@@ -18,17 +21,23 @@ const Page: React.FC = () => {
   return (
     <>
     <Navbar/>
+     <section id="herosection">
       <HeroSection
         categories={selectedCategories}
         onCategorySelect={handleCategorySelect}
         link="https://example.com" // replace with the link you want
       />
+      </section>
       <section id="toolsection">
       <ToolSection selectedCategories={selectedCategories}/>
       </section>
       <section id="featuresection">
       <FeatureSection />
-      </section>
+      </section>    
+      <section id="newssection">
+      <Newssection />
+      </section>    
+      <Footer />
     </>
   )
 }

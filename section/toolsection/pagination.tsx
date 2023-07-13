@@ -4,9 +4,10 @@ interface PaginationProps {
     itemsPerPage: number;
     totalItems: number;
     paginate: (pageNumber: number) => void;
+    currentPage: number;
 }
 
-const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, paginate }) => {
+const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, paginate, currentPage }) => {
     const pageNumbers = [];
 
     for (let i = 1; i <= Math.ceil(totalItems / itemsPerPage); i++) {
@@ -14,13 +15,13 @@ const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, pagin
     }
 
     return (
-        <nav>
-            <ul className="flex justify-center gap-2 mt-4">
+        <nav aria-label="Page navigation example">
+            <ul className="inline-flex -space-x-px text-base h-10">
                 {pageNumbers.map(number => (
-                    <li key={number} className='cursor-pointer'>
-                        <a onClick={() => paginate(number)} className="text-blue-500 hover:text-blue-700">
+                    <li key={number}>
+                        <button onClick={() => paginate(number)} className={`flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-white border border-gray-300 ${number === currentPage ? 'text-blue-600 bg-blue-50' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
                             {number}
-                        </a>
+                        </button>
                     </li>
                 ))}
             </ul>

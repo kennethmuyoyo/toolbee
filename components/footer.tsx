@@ -2,21 +2,21 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900">
+    <footer className="bg-gray-950">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
           <a href="#herosection" className="flex items-center">
               <div className="relative">
                 <div className="text-custom-yellow md:w-[148.44px] md:h-[77.62px] md:top-[11.38px] w-[118.63px] h-[74.13px] left-0 top-[8.87px] absolute md:text-[34px] text-[28px] font-bold font-league-spartan">TOOL</div>
-                <div className="text-gray-950 md:w-[148.44px] md:h-[77.62px] md:left-[80.56px] absolute w-[118.63px] h-[74.13px] left-[69px] top-0 md:text-[34px] text-[28px] font-bold font-league-spartan">BEE</div>
+                <div className="text-gray-100 md:w-[148.44px] md:h-[77.62px] md:left-[80.56px] absolute w-[118.63px] h-[74.13px] left-[69px] top-0 md:text-[34px] text-[28px] font-bold font-league-spartan">BEE</div>
               </div>
             </a>
-            <p className="mt-20">Do you want to feature your tool on our website? Reach out to us on email.</p>
+            <p className="text-gray-100 mt-20">Do you want to feature your tool on our website? Reach out to us on email.</p>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase dark:text-white">Resources</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="#news-section" className="hover:underline">AI News</a>
@@ -27,7 +27,7 @@ const Footer = () => {
               </ul>
             </div>
             <div>
-              <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
+              <h2 className="mb-6 text-sm font-semibold text-gray-100 uppercase dark:text-white">Follow us</h2>
               <ul className="text-gray-500 dark:text-gray-400 font-medium">
                 <li className="mb-4">
                   <a href="https://www.instagram.com/your-handle" className="hover:underline">Instagram</a>

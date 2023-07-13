@@ -35,9 +35,9 @@ const FeatureSection: React.FC = () => {
   ];  
 
   return (
-    <div className="mt-5 mb-10 flex justify-center items-center">
+    <div className="mt-20 mb-10 flex justify-center items-center">
       <div className="w-full md:w-full">
-        <div className="mb-5 w-full text-center text-orange-50 md:text-[32px] text-[22px] font-semibold">
+        <div className="mb-5 w-full text-center text-orange-50 md:text-[40px] text-[27px] font-league-spartan font-bold">
           FEATURED AI TOOLS
         </div>
           <Carousel

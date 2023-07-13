@@ -25,13 +25,13 @@ const Hexagon: React.FC<HexagonProps> = ({ category, selected, onCategorySelect 
               {selected?(
                 <>
                 <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.selectedColor}/>
-                <text x="50%" y="50%" textAnchor="middle" stroke={colors.selectedTextColor} strokeWidth="px" dy=".3em" fontSize="10" fontWeight="normal">{category}</text>
+                <text x="50%" y="50%" textAnchor="middle" stroke={colors.selectedTextColor} strokeWidth="px" dy=".3em" fontSize="9.5" font-family="Poppins" fontWeight="200">{category}</text>
                 </>
 
               ):(
                 <>
                 <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.unselectedColor}/>
-                <text x="50%" y="50%" textAnchor="middle" stroke={colors.unselectedTextColor} strokeWidth="px" dy=".3em" fontSize="10" fontWeight="normal">{category}</text>
+                <text x="50%" y="50%" textAnchor="middle" stroke={colors.unselectedTextColor} strokeWidth="px" dy=".3em" fontSize="9.5" fontWeight="200" font-family="Poppins">{category}</text>
                 </>
               )}
             </svg>

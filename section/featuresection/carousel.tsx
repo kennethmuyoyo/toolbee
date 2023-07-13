@@ -58,15 +58,31 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
         onClick={handlePrevClick}
         className="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
       >
-        <span className="hidden lg:block">Prev</span>
-        <span className="block lg:hidden">&larr;</span>
+        {/* <span className="hidden lg:block">Prev</span> */}
+        <span className="">          <svg className="w-3.5 h-3.5 ml-2 transform rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+    <path
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M1 5h12m0 0L9 1m4 4L9 9"
+    />
+</svg></span>
       </button>
       <button
         onClick={handleNextClick}
         className="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white rounded-full p-2 shadow-md"
       >
-        <span className="hidden lg:block">Next</span>
-        <span className="block lg:hidden">&rarr;</span>
+        {/* <span className="hidden lg:block">Prev</span> */}
+        <span className="">          <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">
+            <path
+              stroke="currentColor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M1 5h12m0 0L9 1m4 4L9 9"
+            />
+          </svg></span>
       </button>
       <div className="absolute bottom-[10px] left-1/2 transform -translate-x-1/2 flex space-x-2">
         {Array.from({ length: numberOfDots }).map((_, index) => (

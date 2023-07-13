@@ -40,24 +40,24 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
       <a href={feature.link}>
         <div className="relative h-48 w-full md:w-80 p-8 rounded-t-lg">
           <Image src={urlFor(feature.image).url()} alt="product image" layout="fill" objectFit="cover" className="rounded-t-lg" loading="eager" />
-          <span className="absolute top-2 left-2 bg-blue-600 text-white px-2 py-1 text-xs rounded">{feature.tag}</span>
+          <span className="absolute top-2 left-2 bg-custom-purple text-gray-200 px-2 py-1 text-xs rounded">{feature.tag}</span>
         </div>
       </a>
       <div className="px-5 pb-5">
         <a href={feature.link}>
-          <h5 className="mt-4 text-xl font-semibold tracking-tight text-white">{feature.name}</h5>
+          <h5 className="mt-4 text-xl font-semibold tracking-tight font-poppins text-gray-200">{feature.name}</h5>
         </a>
-        <div className="text-sm mb-2 text-white overflow-hidden">
+        <div className="text-sm mb-2 text-gray-400 overflow-hidden">
           <span className={showFullDescription ? '' : 'line-clamp-2 mb-2'}>{feature.description}</span>
           <a href="#" onClick={handleReadMoreClick} className="mt-4 text-blue-700 cursor-pointer"> Read {showFullDescription ? 'Less' : 'More'}</a>
         </div>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
-              <span key={i}>{i < feature.rating ? <FaStar color='white' /> : <FaRegStar color='white' />}  </span>
+              <span key={i}>{i < feature.rating ? <FaStar color='white' /> : <FaRegStar color='gray' />}  </span>
             ))}
           </div>
-          <a href="#" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Visit Site</a>
+          <a href="#" className="text-gray-200 bg-custom-purple hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Visit Site</a>
         </div>
       </div>
     </div>

@@ -37,14 +37,14 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description }) 
               </div>
               </a>
               <div className="mx-5 mb-2">
-                  <span className="text-xs text-gray-300 bg-blue-950 px-2 py-1 rounded">{category}</span>
+                  <span className="text-xs text-gray-300 bg-custom-purple px-2 py-1 rounded font-poppins">{category}</span>
               </div>
-              <h2 className="mx-5 text-lg font-bold mb-2">{name}</h2>
-              <div className="mx-5 text-sm mb-2 text-gray-800 overflow-hidden">
+              <h2 className="mx-5 text-lg font-bold mb-2 font-poppins">{name}</h2>
+              <div className="mx-5 text-sm mb-2 text-gray-800 overflow-hidden font-poppins">
                   <span className={showFullDescription ? '' : 'line-clamp-2 mb-2'}>{description}</span>
                   <a onClick={handleReadMoreClick} className="mt-4 text-blue-600 cursor-pointer"> Read {showFullDescription ? 'Less' : 'More'}</a>
               </div>
-              <Button className="text-sm ml-5 mt-4 mb-5 border-2 rounded-xl border-blue-600" onClick={() => window.open(link, "_blank")}>
+              <Button className="font-poppins font-semibold text-sm ml-5 mt-4 mb-5 border-2 rounded-xl border-custom-purple" onClick={() => window.open(link, "_blank")}>
                   Visit Site
               </Button>
           </div>

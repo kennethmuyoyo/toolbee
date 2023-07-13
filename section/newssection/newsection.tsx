@@ -69,7 +69,7 @@ interface Image {
     return (
       <div className="flex justify-center items-center">
       <div className="w-3/4 md:w-full">
-          <div className="mb-8 w-full text-center text-orange-50 md:text-[32px] text-[22px] font-semibold">
+          <div className="mb-8 w-full text-center text-orange-50 md:text-[32px] text-[22px] font-bold font-league-spartan md:text-[40px] text-[27px]">
             LATEST AI NEWS
           </div>    
           <div className="flex justify-center items-center">

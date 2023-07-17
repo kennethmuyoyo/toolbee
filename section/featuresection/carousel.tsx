@@ -90,7 +90,7 @@ const Carousel: React.FC<CarouselProps> = ({ cards }) => {
             key={index}
             onClick={() => handleDotClick(index)}
             className={`w-2 h-2 rounded-full ${
-              index * cardsToShow === currentCardIndex ? 'bg-blue-500' : 'bg-gray-200'
+              index * cardsToShow === currentCardIndex ? 'bg-custom-yellow' : 'bg-gray-200'
             }`}
           />
         ))}

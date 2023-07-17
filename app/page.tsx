@@ -7,6 +7,7 @@ import Navbar from '@/components/Navbar'
 import FeatureSection from '@/section/featuresection/featuresection'
 import Newssection from '@/section/newssection/newsection'
 import Footer from '@/components/footer'
+import HomeSection from '@/section/homesection/homesection'
 
 
 const Page: React.FC = () => {
@@ -21,22 +22,15 @@ const Page: React.FC = () => {
   return (
     <>
     <Navbar/>
-     <section id="herosection">
+      <HomeSection/>
       <HeroSection
         categories={selectedCategories}
         onCategorySelect={handleCategorySelect}
         link="https://example.com" // replace with the link you want
       />
-      </section>
-      <section id="toolsection">
       <ToolSection selectedCategories={selectedCategories}/>
-      </section>
-      <section id="featuresection">
       <FeatureSection />
-      </section>    
-      <section id="newssection">
       <Newssection />
-      </section>    
       <Footer />
     </>
   )

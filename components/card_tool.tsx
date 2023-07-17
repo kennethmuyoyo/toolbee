@@ -34,6 +34,10 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description }) 
               <a href={link}>
                 <div className="relative h-48 w-full md:w-96 mb-4 rounded">
                   <Image src={urlFor(image).url()} alt={name} layout="fill" objectFit="cover" className="rounded-t-3xl" loading="eager" />
+                  <div className="">
+                    <Image src="/honey.svg" alt="tag" width="100" height="100" className="absolute -top-0 left-2"/>
+                    <p className="font-poppins text-gray-900 text-[12px] font-bold absolute top-0 left-8">{category}</p>
+            </div>
               </div>
               </a>
               <div className="mx-5 mb-2">
@@ -41,10 +45,10 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description }) 
               </div>
               <h2 className="mx-5 text-lg font-bold mb-2 font-poppins">{name}</h2>
               <div className="mx-5 text-sm mb-2 text-gray-800 overflow-hidden font-poppins">
-                  <span className={showFullDescription ? '' : 'line-clamp-2 mb-2'}>{description}</span>
-                  <a onClick={handleReadMoreClick} className="mt-4 text-blue-600 cursor-pointer"> Read {showFullDescription ? 'Less' : 'More'}</a>
+                  <span className={showFullDescription ? '' : 'line-clamp-2 mb-2 font-poppins'}>{description}</span>
+                  <a onClick={handleReadMoreClick} className="mt-4 text-blue-700 cursor-pointer"> Read {showFullDescription ? 'Less' : 'More'}</a>
               </div>
-              <Button className="font-poppins font-semibold text-sm ml-5 mt-4 mb-5 border-2 rounded-xl border-custom-purple" onClick={() => window.open(link, "_blank")}>
+              <Button className="hover:bg-custom-purple hover:text-gray-200 font-poppins font-semibold text-sm ml-5 mt-4 mb-5 border-2 rounded-xl border-custom-purple" onClick={() => window.open(link, "_blank")}>
                   Visit Site
               </Button>
           </div>

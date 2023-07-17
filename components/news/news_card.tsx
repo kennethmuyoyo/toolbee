@@ -15,7 +15,7 @@ interface NewsCardProps {
 
 const Newscard: React.FC<NewsCardProps> = ({ news }) => {
   return (
-    <div className="max-w-sm bg-gray-300 border border-gray-200 rounded-lg shadow-2xl">
+    <div className="max-w-sm bg-gray-300 rounded-lg shadow-2xl">
       <a href={news.link}>
         <img src={news.image || "/honey_dipper.svg"} alt="news" width={500} height={300} className="rounded-t-lg" />
       </a>
@@ -26,7 +26,7 @@ const Newscard: React.FC<NewsCardProps> = ({ news }) => {
         <p className="mb-3 font-poppins text-[14px] font-normal text-gray-700">{news.description}</p>
         <a
           href={news.link}
-          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-custom-purple rounded-lg hover:bg-blue-950 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-custom-purple rounded-lg hover:bg-custom-yellow"
         >
           Read more
           <svg className="w-3.5 h-3.5 ml-2" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 10">

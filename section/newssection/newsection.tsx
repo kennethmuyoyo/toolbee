@@ -1,7 +1,8 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import Newscard from '@/components/news/news_card';
 import Pagination from '@/section/toolsection/pagination';
+import Image from 'next/image';
 
 
 interface Image {
@@ -25,6 +26,7 @@ interface Image {
   }
   
   const Newssection: React.FC = () => {
+    const sectionRef = useRef<HTMLDivElement>(null);
     const [newsList, setNewsList] = useState<News[]>([]);
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage, setItemsPerPage] = useState(6);
@@ -67,29 +69,34 @@ interface Image {
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   
     return (
-      <div className="flex justify-center items-center">
-      <div className="w-3/4 md:w-full">
-          <div className="mb-8 w-full text-center text-orange-50 md:text-[32px] text-[22px] font-bold font-league-spartan md:text-[40px] text-[27px]">
+      <div ref={sectionRef} className="relative flex justify-center items-center">
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-2 absolute top-0 -left-0 opacity-20" loading="eager"/>
+    
+        <div className="w-3/4 md:w-full">
+          <div id="newssection" className="pt-24 mb-8 w-full text-center text-orange-50 font-bold font-league-spartan md:text-[40px] text-[27px]">
             LATEST AI NEWS
           </div>    
           <div className="flex justify-center items-center">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-            {currentItems.map((news) => (
-              <Newscard key={news.id} news={news} />
-            ))}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+              {currentItems.map((news) => (
+                <Newscard key={news.id} news={news} />
+              ))}
+            </div>
+          </div> 
+          <div className="mt-5 mb-5 flex justify-center items-center">
+            <Pagination
+              itemsPerPage={itemsPerPage}
+              totalItems={newsList.length}
+              paginate={paginate}
+              currentPage={currentPage}
+              sectionRef={sectionRef}
+            />
           </div>
-        </div> 
-        <div className="mt-5 mb-5 flex justify-center items-center">
-          <Pagination
-            itemsPerPage={itemsPerPage}
-            totalItems={newsList.length}
-            paginate={paginate}
-            currentPage={currentPage}
-          />
-          </div>
-      </div>
+        </div>
+    
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-2 absolute bottom-0 -right-0 opacity-20 rotate-180" loading="eager"/>
       </div>
     );
-  };
-  
+    
+              };
   export default Newssection;

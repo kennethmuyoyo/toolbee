@@ -11,7 +11,7 @@ const Navbar = () => {
 
   
   return (
-<nav className="pt-6 mx-8 md:mx-16 pb-6 fixed w-full z-20 top-0 bg-custom-purple">
+<nav className="pt-6 px-8 md:px-16 pb-6 fixed w-full z-20 top-0 bg-custom-purple">
   <div className="max-w-screen-xl flex flex-wrap items-center justify-between">
     <div className="flex items-center">
       <a href="#homesection" className="flex">

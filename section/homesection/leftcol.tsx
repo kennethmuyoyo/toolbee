@@ -25,7 +25,7 @@ function LeftCol({onClick}: {onClick?: () => void}) {
       <motion.div {...headContentAnimation} className="mt-8 font-poppins text-gray-100 text-[20px] md:text-[25px] font-medium md:mb-7 mb-3">
         <p>A Hive Full of Al Tools</p>
       </motion.div>
-      <Button className="mb-10 mt-8 md:mt-20 mt:5 rounded-2xl w-2/3 md:w-[400px] bg-custom-yellow">
+      <Button className="z-20 mb-10 mt-8 md:mt-20 mt:5 rounded-2xl w-2/3 md:w-[400px] bg-custom-yellow">
             <a href="#toolsection">
               <div className="mt-2 mb-2 justify-start items-start flex">
                 <div className="mx-3 text-gray-950 md:text-[18px] font-poppins font-medium">Search Tools</div>

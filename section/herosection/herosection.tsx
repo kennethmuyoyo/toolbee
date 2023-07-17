@@ -55,7 +55,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
               </p>
             </div>
           </div>
-          <Button className="hidden md:block mt-8 mb-10 md:mt-20 mt:5 rounded-2xl w-full md:w-[600px] bg-custom-yellow">
+          <Button className="z-20 hidden md:block mt-8 mb-10 md:mt-20 mt:5 rounded-2xl w-full md:w-[600px] bg-custom-yellow">
             <a href="#honeysection">
               <div className="mt-2 mb-2 justify-start items-start flex">
                 <div className="mx-3 text-gray-950 md:text-[18px] text-[17px] font-poppins font-medium">Make some honey</div>
@@ -69,7 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             handleCategorySelect={onCategorySelect}
           />
         </div>
-        <Button className="md:hidden block mt-8 mb-10 md:mt-20 mt:10 rounded-2xl w-full md:w-[600px] bg-custom-yellow">
+        <Button className="z-20 md:hidden block mt-8 mb-10 md:mt-20 mt:10 rounded-2xl w-full md:w-[600px] bg-custom-yellow">
           <a href="#honeysection">
             <div className="mt-2 mb-2 justify-start items-start flex">
               <div className="mx-3 text-gray-950 md:text-[18px] text-[17px] font-poppins font-medium">Make some honey</div>

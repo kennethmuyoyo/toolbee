@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <section className="relative px-4 md:px-14 bg-custom-purple">
       <div id="toolsection" className="relative pt-24 text-center justify-center font-league-spartan text-gray-100 md:text-[40px] text-[30px] font-bold">
         AI DIRECTORY
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-20 absolute top-12 -left-14 opacity-20" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute top-12 -left-14 opacity-20" loading="eager"/>
       </div>
       <div className="flex flex-col md:flex-row max-w-screen-xl px-4 py-8 md:gap-8 md:py-16">
         <div className="mx-auto">

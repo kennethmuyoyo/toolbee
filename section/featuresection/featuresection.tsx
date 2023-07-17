@@ -37,7 +37,7 @@ const FeatureSection: React.FC = () => {
 
   return (
     <div className="relative mt-20 mb-10 flex justify-center items-center">
-      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-2 absolute top-0 -left-0 opacity-20" loading="eager"/>
+      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute top-0 -left-0 opacity-20" loading="eager"/>
   
       <div className="w-full md:w-full">
         <h1 id="featuresection" className="pt-24 mb-5 w-full text-center text-orange-50 md:text-[40px] text-[27px] font-league-spartan font-bold">
@@ -51,7 +51,7 @@ const FeatureSection: React.FC = () => {
             ))}
           />
         </div>
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-10 absolute bottom-0 -right-0 opacity-20 rotate-180" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute bottom-0 -right-0 opacity-20 rotate-180" loading="eager"/>
     </div>
   );
             }  

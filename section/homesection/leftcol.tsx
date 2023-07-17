@@ -13,7 +13,7 @@ function LeftCol({onClick}: {onClick?: () => void}) {
   return (
     <motion.div className="mt-12 items start justify-center h-full pt-20 flex flex-col w-full justify-left md:w-2/3">
       <div className="">
-            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-20 absolute -top-0 -left-0.5 opacity-20" loading="eager"/>
+            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute -top-0 -left-0.5 opacity-20" loading="eager"/>
           </div>
           <motion.div {...headTextAnimation} className="text-left">
     
@@ -33,7 +33,7 @@ function LeftCol({onClick}: {onClick?: () => void}) {
             </a>
           </Button>
           <div className="">
-            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-20 absolute -bottom-0 -right-0.5 opacity-20 rotate-180" loading="eager"/>
+            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute -bottom-0 -right-0.5 opacity-20 rotate-180" loading="eager"/>
           </div>
               </motion.div>
               

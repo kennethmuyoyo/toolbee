@@ -81,7 +81,7 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
 
   return (
     <div ref={sectionRef} className="relative flex justify-center items-center">
-      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-2 absolute top-10 -left-1 opacity-20" loading="eager"/>
+      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute top-10 -left-1 opacity-20" loading="eager"/>
       <div className="w-3/4 md:w-full">
           <div id="honeysection" className="pt-24 font-league-spartan mb-8 w-full text-center text-orange-50 md:text-[40px] text-[27px] font-bold">
             YOUR HONEY POT OF AI TOOLS
@@ -119,7 +119,7 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
         />
           </div>
       </div>
-      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-20 absolute -bottom-10 -right-0 opacity-20 rotate-180" loading="eager"/>
+      <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute -bottom-10 -right-0 opacity-20 rotate-180" loading="eager"/>
     </div>
   )
 }  

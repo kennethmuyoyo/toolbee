@@ -69,9 +69,7 @@ interface Image {
     const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
   
     return (
-      <div ref={sectionRef} className="relative flex justify-center items-center">
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute top-0 -left-0 opacity-20" loading="eager"/>
-    
+      <div ref={sectionRef} className="relative flex justify-center items-center">    
         <div className="w-3/4 md:w-full">
           <div id="newssection" className="pt-24 mb-8 w-full text-center text-orange-50 font-bold font-league-spartan md:text-[40px] text-[27px]">
             LATEST AI NEWS
@@ -93,9 +91,7 @@ interface Image {
             />
           </div>
         </div>
-    
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute bottom-0 -right-0 opacity-20 rotate-180" loading="eager"/>
-      </div>
+          </div>
     );
     
               };

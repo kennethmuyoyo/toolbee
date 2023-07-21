@@ -11,12 +11,22 @@ import HomeSection from '@/section/homesection/homesection'
 
 
 const Page: React.FC = () => {
-  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [selectedCategories, setSelectedCategories] = useState<string[]>(['All']);
 
   const handleCategorySelect = (category: string) => {
-    setSelectedCategories(prev => 
-      prev.includes(category) ? prev.filter(c => c !== category) : [...prev, category]
-    );
+    let newSelectedCategories = [];
+
+    if (category === 'All') {
+      newSelectedCategories = [category];
+    } else if (selectedCategories.includes('All')) {
+      newSelectedCategories = [category];
+    } else {
+      newSelectedCategories = selectedCategories.includes(category)
+        ? selectedCategories.filter((c) => c !== category)
+        : [...selectedCategories, category];
+    }
+
+    setSelectedCategories(newSelectedCategories);
   }
 
   return (

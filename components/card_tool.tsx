@@ -8,20 +8,21 @@ interface CardProps {
     name: string;
     image: any;
     link: string;
-    category: string;
+    category: string[]; // Updated to an array
     description: string;
+    priceTag: string; 
 }
 
 const builder = imageUrlBuilder({
     projectId: 'p4vhljql',
-    dataset: 'production',
+    dataset: 'clean',
 });
 
 function urlFor(source: any) {
     return builder.image(source);
 }
 
-const Card: FC<CardProps> = ({ _id, name, image, link, category, description }) => {
+const Card: FC<CardProps> = ({ _id, name, image, link, category, description, priceTag }) => {
     const [showFullDescription, setShowFullDescription] = useState(false);
 
     const handleReadMoreClick = () => {
@@ -33,15 +34,24 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description }) 
           <div className="p-0 mb-5 w-full md:w-96 h-auto bg-yellow-500 rounded-3xl shadow-2xl gap-0">
               <a href={link}>
                 <div className="relative h-48 w-full md:w-96 mb-4 rounded">
-                  <Image src={urlFor(image).url()} alt={name} layout="fill" objectFit="cover" className="rounded-t-3xl" loading="eager" />
-                  <div className="">
-                    <Image src="/honey.svg" alt="tag" width="100" height="100" className="absolute -top-0 left-2"/>
-                    <p className="font-poppins text-gray-900 text-[12px] font-bold absolute top-0 left-8">{category}</p>
-            </div>
+                <Image 
+                    src={image ? urlFor(image).url() : '/honeydipper.png'} 
+                    alt={name} 
+                    layout="fill" 
+                    objectFit="cover" 
+                    className="rounded-t-3xl" 
+                    loading="eager" 
+                />                
+                <div className="relative -top-0.5 left-4 h-24 w-24">
+                <Image src="/honey.svg" alt="tag" layout="fill" objectFit="cover" className="absolute -top-0.5 left-20"/>
+                <p className="absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[11px] font-semibold">{priceTag}</p>
+                </div>
               </div>
               </a>
               <div className="mx-5 mb-2">
-                  <span className="text-xs text-gray-300 bg-custom-purple px-2 py-1 rounded font-poppins">{category}</span>
+                  {category.map(cat => (
+                    <span key={cat} className="text-xs text-gray-300 bg-custom-purple px-2 mr-2 py-1 rounded font-poppins">{cat}</span>
+                  ))}
               </div>
               <h2 className="mx-5 text-lg font-bold mb-2 font-poppins">{name}</h2>
               <div className="mx-5 text-sm mb-2 text-gray-800 overflow-hidden font-poppins">

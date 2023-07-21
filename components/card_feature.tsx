@@ -20,7 +20,7 @@ interface FeatureCardProps {
 
 const builder = imageUrlBuilder({
   projectId: 'p4vhljql', // replace with your project id
-  dataset: 'production',
+  dataset: 'clean',
 });
 
 function urlFor(source: any) {
@@ -40,10 +40,10 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
       <a href={feature.link}>
         <div className="relative h-48 w-full md:w-80 p-8 rounded-t-lg">
           <Image src={urlFor(feature.image).url()} alt="product image" layout="fill" objectFit="cover" className="rounded-t-lg" loading="eager" />
-          <div className="">
-            <Image src="/honey.svg" alt="tag" width="100" height="100" className="absolute -top-0.5 left-1"/>
-            <p className="font-poppins text-gray-900 text-[12px] font-bold absolute top-0 left-7">{feature.tag}</p>
-          </div>
+          <div className="absolute -top-0.5 left-4 h-24 w-24">
+                <Image src="/honey.svg" alt="tag" layout="fill" objectFit="cover" className=""/>
+                <p className="absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[11px] font-semibold">{feature.price}</p>
+                </div>
         </div>
       </a>
       <div className="px-5 pb-5">

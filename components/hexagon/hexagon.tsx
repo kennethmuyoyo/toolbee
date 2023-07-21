@@ -20,18 +20,18 @@ const Hexagon: React.FC<HexagonProps> = ({ category, selected, onCategorySelect 
   return (
     <div className="inline-block -mx-0.5"> 
         <button onClick={handleCardSelect} className="focus:outline-none">
-            <svg className="w-16 h-16 md:w-32 md:h-32 transform hover:scale-105 transition duration-300" viewBox="0 0 100 100">
+            <svg className="w-24 h-24 md:w-36 md:h-36 transform hover:scale-105 transition duration-300" viewBox="0 0 100 100">
             
               {selected?(
                 <>
                 <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.selectedColor}/>
-                <text x="50%" y="50%" textAnchor="middle" stroke={colors.selectedTextColor} strokeWidth="px" dy=".3em" fontSize="9.5" font-family="Poppins" fontWeight="200">{category}</text>
+                <text x="50%" y="50%" textAnchor="middle" stroke={colors.selectedTextColor} strokeWidth="px" dy=".3em" fontSize="10" font-family="Poppins" fontWeight="200">{category}</text>
                 </>
 
               ):(
                 <>
                 <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.unselectedColor}/>
-                <text x="50%" y="50%" textAnchor="middle" stroke={colors.unselectedTextColor} strokeWidth="px" dy=".3em" fontSize="9.5" fontWeight="200" font-family="Poppins">{category}</text>
+                <text x="50%" y="50%" textAnchor="middle" stroke={colors.unselectedTextColor} strokeWidth="px" dy=".3em" fontSize="10" fontWeight="200" font-family="Poppins">{category}</text>
                 </>
               )}
             </svg>

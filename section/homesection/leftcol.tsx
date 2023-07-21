@@ -17,13 +17,13 @@ function LeftCol({onClick}: {onClick?: () => void}) {
           </div>
           <motion.div {...headTextAnimation} className="text-left">
     
-        <div className="mt-8 font-poppins text-gray-100 md:text-[35px] text-[25px] font-semibold mb-5">
-            The only <span className='text-custom-yellow'>Al worker bee</span> who is finding the right tools for you, honey! 
+        <div className=" font-poppins md:text-[35px] text-[25px] font-semibold mb-5 text-custom-yellow">
+            BUZZ! 
           </div>
         
       </motion.div>
-      <motion.div {...headContentAnimation} className="mt-8 font-poppins text-gray-100 text-[20px] md:text-[25px] font-medium md:mb-7 mb-3">
-        <p>A Hive Full of Al Tools</p>
+      <motion.div {...headContentAnimation} className="mt-8 font-poppins text-gray-100 md:text-[30px] text-[20px] font-semibold md:mb-7 mb-3">
+        <p>We are the only AI Tools Directory you need right now. Check out a Hive Full of Al</p>
       </motion.div>
       <Button className="z-20 mb-10 mt-8 md:mt-20 mt:5 rounded-2xl w-2/3 md:w-[400px] bg-custom-yellow">
             <a href="#toolsection">

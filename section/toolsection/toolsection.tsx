@@ -10,8 +10,9 @@ interface CardProps {
   name: string;
   image: string;
   link: string;
-  category: string;
+  category: string[];
   description: string;
+  priceTag: string;
 }
 
 interface ToolSectionProps {
@@ -22,9 +23,11 @@ const fetcher = (query: string) => sanityClient.fetch(query)
 
 const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const { data: cards, error } = useSWR<CardProps[]>('*[_type == "tools"]', fetcher)
+  const { data: cards, error } = useSWR<CardProps[]>('*[_type == "aitools"]', fetcher)
   const [currentPage, setCurrentPage] = useState(1);
   const [itemsPerPage, setItemsPerPage] = useState(6); // initialize to default large screen value
+
+
 
   useEffect(() => {
     const getItemsPerPage = () => {
@@ -71,8 +74,11 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
     </div>
   )
 
-  const filteredCards = cards.filter(card => selectedCategories.includes(card.category));
-  
+  let filteredCards = cards;
+  if (!selectedCategories.includes('All')) {
+    filteredCards = cards.filter(card => card.category.some(c => selectedCategories.includes(c)));
+  }
+
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentItems = filteredCards.slice(indexOfFirstItem, indexOfLastItem);
@@ -84,14 +90,16 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
       <div className="w-3/4 md:w-full">
           <div id="honeysection" className="pt-24 font-league-spartan mb-8 w-full text-center text-orange-50 md:text-[40px] text-[27px] font-bold">
             YOUR HONEY POT OF AI TOOLS
+            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute -top-0 -left-14 opacity-30" loading="eager"/>
+
           </div>    
           <div className="flex justify-center items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 mx-4">
               {selectedCategories.length > 0 ? 
-                currentItems.map((card) => (
-                  <Card key={card._id} {...card} />
-                ))
-                :
+              currentItems.map((card) => (
+                <Card key={card._id} {...card} />
+              ))
+              :
                 <div className="col-span-3 flex justify-center items-center">
                 <div className="relative flex flex-col items-center justify-center mx-auto space-y-4">
                   <div className='md:text-[20px] font-poppins font-semibold text-gray-400'>Please select a category from the hives above to see the related tools.</div>
@@ -116,6 +124,9 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
             sectionRef={sectionRef}
 
         />
+        <div className="">
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute bottom-0 right-0 opacity-30 rotate-180" loading="eager"/>
+      </div>
           </div>
       </div>
     </div>

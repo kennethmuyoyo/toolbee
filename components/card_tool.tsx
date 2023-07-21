@@ -35,7 +35,7 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description, pr
               <a href={link}>
                 <div className="relative h-48 w-full md:w-96 mb-4 rounded">
                 <Image 
-                    src={image ? urlFor(image).url() : '/honeydipper.png'} 
+                    src={image ? urlFor(image).url() : '/place.png'} 
                     alt={name} 
                     layout="fill" 
                     objectFit="cover" 

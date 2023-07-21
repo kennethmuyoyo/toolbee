@@ -18,9 +18,13 @@ interface FeatureCardProps {
   feature: Feature;
 }
 
+if (!process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || !process.env.NEXT_PUBLIC_SANITY_DATASET) {
+  throw new Error('Missing Sanity environment variables.');
+}
+
 const builder = imageUrlBuilder({
-  projectId: 'p4vhljql', // replace with your project id
-  dataset: 'clean',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID, 
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
 });
 
 function urlFor(source: any) {

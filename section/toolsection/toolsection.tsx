@@ -125,7 +125,7 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
 
         />
         <div className="">
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="z-0 absolute bottom-0 right-0 opacity-30 rotate-180" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute bottom-0 right-0 opacity-30 rotate-180" loading="eager"/>
       </div>
           </div>
       </div>

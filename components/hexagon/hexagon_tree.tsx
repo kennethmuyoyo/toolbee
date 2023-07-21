@@ -33,7 +33,7 @@ const HexagonTree: React.FC<HexagonTreeProps> = ({ selectedCategories, handleCat
   categories.unshift('All');
 
   // Pattern for mobile and desktop
-  const pattern = isMobile ? [4, 3, 4, 3, 4, 3, 2, 1] : [6, 5, 4, 5, 4]; 
+  const pattern = isMobile ? [3, 4, 3, 4, 3, 4, 3, 4, 3] : [6, 5, 4, 5, 4]; 
   const rows: string[][] = [];
   let row: string[] = [];
   let patternIndex = 0;

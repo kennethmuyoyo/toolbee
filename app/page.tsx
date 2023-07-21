@@ -8,6 +8,7 @@ import FeatureSection from '@/section/featuresection/featuresection'
 import Newssection from '@/section/newssection/newsection'
 import Footer from '@/components/footer'
 import HomeSection from '@/section/homesection/homesection'
+import Head from 'next/head'
 
 
 const Page: React.FC = () => {
@@ -31,6 +32,17 @@ const Page: React.FC = () => {
 
   return (
     <>
+      <Head>
+        <link rel="icon" href="/favicon.ico" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000" />
+        <link rel="apple-touch-icon" sizes="180x180" href="/favicon.ico"/>
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico"/>
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon.icc"/>
+        <link rel="manifest" href="/favicon.ico"/>
+        <link rel="mask-icon" href="/favicon.ico" color="#5bbad5"/>
+        <meta name="msapplication-TileColor" content="#da532c"/>
+        <meta name="theme-color" content="#ffffff"></meta>
+      </Head>
     <Navbar/>
       <HomeSection/>
       <HeroSection

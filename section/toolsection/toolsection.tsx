@@ -90,7 +90,7 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
       <div className="w-3/4 md:w-full">
           <div id="honeysection" className="pt-24 font-league-spartan mb-8 w-full text-center text-orange-50 md:text-[40px] text-[27px] font-bold">
             YOUR HONEY POT OF AI TOOLS
-            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute -top-0 -left-14 opacity-30" loading="eager"/>
+            <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute -top-0 -left-14 opacity-20" loading="eager"/>
 
           </div>    
           <div className="flex justify-center items-center">
@@ -125,7 +125,7 @@ const Toolsection: React.FC<ToolSectionProps> = ({ selectedCategories }) => {
 
         />
         <div className="">
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute bottom-0 right-0 opacity-30 rotate-180" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute bottom-0 right-0 opacity-25 rotate-180" loading="eager"/>
       </div>
           </div>
       </div>

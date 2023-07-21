@@ -23,7 +23,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
     <section className="relative px-4 md:px-14 bg-custom-purple">
       <div id="toolsection" className="relative pt-24 text-center justify-center font-league-spartan text-gray-100 md:text-[40px] text-[30px] font-bold">
         AI TOOL DIRECTORY
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute top-12 -left-14 opacity-25" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-0 absolute top-12 -left-14 opacity-25" loading="eager"/>
       </div>
       <div className="flex flex-col px-4 py-8 ">
         <div className="mx-auto">
@@ -61,7 +61,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
             </a>
           </Button> */}
         </div>
-        <div className="mt-10 md:mt-10 z-10">
+        <div className="mt-10 md:mt-10 z-20">
           <HexagonTree
             selectedCategories={categories}
             handleCategorySelect={onCategorySelect}
@@ -69,8 +69,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </div>
         <div className="">
       </div>
-        <Button className="items-center justify-center mx-auto mt-8 mb-10 rounded-2xl w-full md:w-[600px] ">
-      <Image src="/honeydipper.png" alt="tag" width="180" height="180" className="justify-end items-end -z-20 absolute bottom-20 right-17 " loading="eager"/>
+        <Button className="z-20 items-center justify-center mx-auto mt-8 mb-10 rounded-2xl w-full md:w-[600px] ">
         <a href="#honeysection">
             <div className="py-3 text-center justify-center items-center flex bg-custom-yellow rounded-2xl">
               <div className="mx-3 text-gray-950 md:text-[18px] text-[17px] font-poppins font-medium">Submit</div>
@@ -79,7 +78,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
         </Button>
       </div>
       <div className="">
-        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-20 absolute bottom-0 right-0 opacity-20 rotate-180" loading="eager"/>
+        <Image src="/honeycomb.svg" alt="tag" width="500" height="500" className="-z-0 absolute bottom-0 right-0 opacity-20 rotate-180" loading="eager"/>
       </div>
     </section>
   );

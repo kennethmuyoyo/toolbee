@@ -22,9 +22,9 @@ function LeftCol({onClick}: {onClick?: () => void}) {
           </div>
         
       </motion.div>
-      <motion.div {...headContentAnimation} className="mt-8 font-poppins text-gray-100 md:text-[30px] text-[20px] font-semibold md:mb-7 mb-3">
+      <motion.div {...headContentAnimation} className="mt-8 mb-5 font-poppins text-gray-100 md:text-[30px] text-[20px] font-semibold md:mb-7">
         <p>We are the only AI Tools Directory you need right now.</p> 
-          <p className="mt-4">Check out:</p>
+          <p className="mt-8">Check out:</p>
            <p className="text-custom-yellow mt-4">Our Hive Full of Al Tools</p>
       </motion.div>
       <Button className="z-20 mb-10 mt-8 md:mt-20 mt:5 rounded-2xl w-2/3 md:w-[400px] bg-custom-yellow">

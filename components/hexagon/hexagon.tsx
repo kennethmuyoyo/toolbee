@@ -24,7 +24,7 @@ const Hexagon: React.FC<HexagonProps> = ({ category, selected, onCategorySelect 
                     <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.selectedColor}/>
                     <foreignObject x="10" y="25" width="80" height="50">
                         <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', color: colors.selectedTextColor}}>
-                        {category.split(/ (?![^-]*-)/).map((word, index) => <span key={index} style={{fontSize: '10px', fontFamily: 'poppins', fontWeight: '400'}}>{word}</span>)}
+                        {category.split(/ (?![^-]*-)/).map((word, index) => <span key={index} style={{fontSize: '11px', fontFamily: 'poppins', fontWeight: '400'}}>{word}</span>)}
                         </div>
                     </foreignObject>
                     </>
@@ -33,7 +33,7 @@ const Hexagon: React.FC<HexagonProps> = ({ category, selected, onCategorySelect 
                     <polygon points="50 1 95 25 95 75 50 99 5 75 5 25" fill={colors.unselectedColor}/>
                     <foreignObject x="10" y="25" width="80" height="50">
                         <div style={{width: '100%', height: '100%', display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', color: colors.unselectedTextColor}}>
-                        {category.split(/ (?![^-]*-)/).map((word, index) => <span key={index} style={{fontSize: '10px', fontFamily: 'poppins', fontWeight: '400'}}>{word}</span>)}
+                        {category.split(/ (?![^-]*-)/).map((word, index) => <span key={index} style={{fontSize: '11px', fontFamily: 'poppins', fontWeight: '400'}}>{word}</span>)}
                         </div>
                     </foreignObject>
                     </>

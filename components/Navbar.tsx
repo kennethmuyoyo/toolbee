@@ -10,7 +10,7 @@ const Navbar = () => {
   const [activeNavItem, setActiveNavItem] = useState("");
 
   return (
-    <nav className="pt-6 px-5 md:px-16 pb-6 fixed w-full z-20 top-0 bg-custom-purple">
+    <nav className="pt-6 px-5 md:px-16 pb-6 fixed w-full z-30 top-0 bg-custom-purple">
       <div className="max-w-screen-xl mx-auto flex flex-wrap items-center justify-between">
         <div className="flex items-center">
           <a href="#homesection" className="flex">

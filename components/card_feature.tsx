@@ -46,7 +46,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({ feature }) => {
           <Image src={urlFor(feature.image).url()} alt="product image" layout="fill" objectFit="cover" className="rounded-t-lg" loading="eager" />
           <div className="absolute -top-0.5 left-4 h-24 w-24">
                 <Image src="/honey.svg" alt="tag" layout="fill" objectFit="cover" className=""/>
-                <p className="absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[11px] font-semibold">{feature.price}</p>
+                <p className="pt-1 absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[9px] font-semibold">{feature.price}</p>
                 </div>
         </div>
       </a>

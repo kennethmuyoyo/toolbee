@@ -44,13 +44,13 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description, pr
                 />                
                 <div className="relative -top-0.5 left-4 h-24 w-24">
                 <Image src="/honey.svg" alt="tag" layout="fill" objectFit="cover" className="absolute -top-0.5 left-20"/>
-                <p className="absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[11px] font-semibold">{priceTag}</p>
+                <p className="pt-1 absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[9px] font-semibold">{priceTag}</p>
                 </div>
               </div>
               </a>
               <div className="mx-5 mb-2">
                   {category.map(cat => (
-                    <span key={cat} className="text-xs text-gray-300 bg-custom-purple px-2 mr-2 py-1 rounded font-poppins">{cat}</span>
+                    <span key={cat} className="text-xs text-white bg-custom-purple px-2 mr-2 py-1 rounded font-poppins">{cat}</span>
                   ))}
               </div>
               <h2 className="mx-5 text-lg font-bold mb-2 font-poppins">{name}</h2>

@@ -4,7 +4,7 @@ import Image from 'next/image';
 function RightCol() {
 
   return (
-        <div className="z-20 md:mb-10 md:pl-20 bg-transparent md:justify-right md:items-right md:w-full">
+        <div className="z-40 md:mb-10 md:pl-20 bg-transparent md:justify-right md:items-right md:w-full">
             <Image
               className=''
               src="/bee.png"

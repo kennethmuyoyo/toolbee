@@ -12,6 +12,7 @@ module.exports = {
       fontFamily: {
         'poppins': ['Poppins', 'sans-serif'],
         'league-spartan': ['League Spartan', 'sans-serif'],
+        'roboto': ['Roboto', 'sans-serif']
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

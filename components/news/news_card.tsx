@@ -17,7 +17,7 @@ const Newscard: React.FC<NewsCardProps> = ({ news }) => {
   return (
     <div className="max-w-sm bg-gray-300 rounded-lg shadow-2xl">
       <a href={news.link}>
-        <img src={news.image || "/honey_dipper.svg"} alt="news" width={500} height={300} className="rounded-t-lg" />
+        <img src={news.image || "/honey_dipper.svg"} alt="news" width={500} height={300} className="h-48 w-96 object-cover rounded-t-lg" />
       </a>
       <div className="p-5">
         <a href={news.link}>

@@ -131,7 +131,7 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description, pr
 
     return (
       <>
-          <div className="p-0 mb-5 w-full md:w-96 h-auto bg-yellow-500 rounded-3xl shadow-2xl gap-0">
+          <div className="p-0 mb-5 w-full md:w-96 h-auto bg-custom-yellow rounded-3xl shadow-2xl gap-0">
               <a href={link}>
                 <div className="relative h-48 w-full md:w-96 mb-4 rounded">
                 <Image 
@@ -144,7 +144,7 @@ const Card: FC<CardProps> = ({ _id, name, image, link, category, description, pr
                 />                
                 <div className="relative -top-0.5 left-4 h-24 w-24">
                 <Image src="/honey.svg" alt="tag" layout="fill" objectFit="cover" className="absolute -top-0.5 left-20"/>
-                <p className="pt-1 absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[9px] font-semibold">{priceTag}</p>
+                <p className="pt-1 absolute inset-0 flex justify-center text-center font-poppins text-gray-900 text-[9px] font-semibold pl-2">{priceTag}</p>
                 </div>
               </div>
               </a>

@@ -56,11 +56,11 @@ const Pagination: React.FC<PaginationProps> = ({ itemsPerPage, totalItems, pagin
                 {pagesToShow(currentPage, totalPages).map((number, index) => (
                     <li key={index}>
                         {typeof number === 'number' ? (
-                            <button onClick={() => handleClick(number)} className={`rounded-md flex items-center justify-center px-4 h-10 leading-tight text-gray-500 bg-custom-yellow border-custom-yellow ${number === currentPage ? 'text-blue-600 bg-blue-50' : 'hover:bg-gray-100 hover:text-gray-700'} dark:bg-gray-800 dark:border-gray-700 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white`}>
+                            <button onClick={() => handleClick(number)} className={`rounded-md flex items-center justify-center px-4 h-10 leading-tight text-gray-950 bg-custom-yellow border-custom-yellow ${number === currentPage ? 'text-blue-600 bg-blue-50' : 'hover:bg-yellow-500 hover:text-gray-700'}  `}>
                                 {number}
                             </button>
                         ) : (
-                            <div className="rounded-md flex items-center justify-center px-4 h-10 leading-tight text-gray-500">
+                            <div className="rounded-md flex items-center justify-center px-4 h-10 leading-tight text-gray-200">
                                 {number}
                             </div>
                         )}

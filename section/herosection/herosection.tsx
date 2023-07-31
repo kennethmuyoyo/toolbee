@@ -71,7 +71,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({
       </div>
         <Button className="z-20 items-center justify-center mx-auto mt-8 mb-10 rounded-2xl w-full md:w-[600px] ">
         <a href="#honeysection">
-            <div className="py-3 text-center justify-center items-center flex bg-custom-yellow rounded-2xl">
+            <div className="py-3 text-center justify-center items-center flex bg-custom-yellow hover:bg-yellow-500 rounded-2xl">
               <div className="mx-3 text-gray-950 md:text-[18px] text-[17px] font-poppins font-medium">Submit</div>
             </div>
           </a>

@@ -21,7 +21,7 @@ module.exports = {
       },
       colors: {
         'custom-purple': 'rgb(14, 1, 14, 100)',
-        'custom-yellow': 'rgba(255, 219, 89, 100)'
+        'custom-yellow': 'rgba(255, 200, 0, 100)'
       }
     },
     
